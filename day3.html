@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.css">
+    <title>Día 1</title>
+</head>
+<body>
+    <!-- header -->
+    <div class="container">
+        <h1>Ejercicio día 3</h1>
+        <h3>Condicional if(){}</h3>
+        <div class="code">
+            <code>
+                export function isLeapYear(year) { <br>
+                // Escribe tu código aquí 👈 <br>
+                }
+            </code>
+        </div>
+        <p>En este desafío, debes crear la lógica de la función isLeapYear, que determina si un año es bisiesto o no. Un año es bisiesto si cumple con las siguientes condiciones:</p>
+        <p>
+            <li>Es divisible por 4, pero no por 100.</li>
+            <li>Si es divisible por 100 debe serlo por 400 también.</li>
+        </p>
+        <p>La función isLeapYear recibe un único parámetro: el año a evaluar. Debe devolver true si el año es bisiesto o false en caso contrario.</p>
+        <p>Toma en cuenta que la función debe ser capaz de manejar valores no enteros o negativos.</p>
+        <p>Ejemplo 1:</p>
+        <div class="code">
+            <code>
+                Input: 2000; <br>
+                Output: true;
+            </code>
+        </div>
+        <p>Ejemplo 2:</p>
+        <div class="code">
+            <code>
+                Input: -2024; <br>
+                Output: false;
+            </code>
+        </div>
+
+        <p>Ejemplo 3:</p>
+        <div class="code">
+            <code>
+                Input: 1984.25; <br>
+                Output: false;
+            </code>
+        </div>
+
+        <p>Ingresa un valor para comprobar si el año es bisiesto</p>
+        <input type="text" placeholder="Ingresa el año ejemplo: 2023" id="annio" class="txtInput">
+        <button id="btnCompruebaAnnio">Comprobar año</button>
+
+        <div id="solucion3" class="resultado">
+            <h2>Solución</h2>
+
+            <div class="code">
+                <code>
+                    function isLeapYear(year) { <br>
+                    &nbsp; let result; <br>
+                    &nbsp; if((typeof(year) === "number" && year >= 0)){ <br>
+                    &nbsp; &nbsp; if( (((year % 4) === 0) && ((year % 100) !== 0)) || (((year % 100) === 0) && ((year % 400) ===0))){ <br>
+                    &nbsp; &nbsp; &nbsp; result = true; <br>
+                    &nbsp; &nbsp; }else{ <br>
+                    &nbsp; &nbsp; &nbsp; result = false; <br>
+                    &nbsp; &nbsp; } <br>
+                
+                    &nbsp; }  <br>
+                    &nbsp; else{ <br>
+                    &nbsp; &nbsp; result = false; <br>
+                    &nbsp; } <br>
+                    &nbsp; return result; <br>
+                    }
+                </code>
+            </div>
+            <!-- Code ... -->
+        </div>
+
+        <hr>
+
+        <h3>Condiconal switch</h3>
+        <div class="code">
+            <code>
+                export function getPetExerciseInfo(type, age) {<br>
+                    // Tu Código aquí 👈 <br>
+                  }
+            </code>
+        </div>
+
+        <p>En este desafío recibirás una serie de tipos de mascotas junto con su edad.</p>
+        <p>Dependiendo de estos 2 factores tendrás que construir la función llamada getPetExerciseInfo la cual retornará una cadena de texto con la información necesaria acerca de cuanto ejercicio necesita hacer cada tipo de mascota.</p>
+        <p>La función recibirá las siguientes mascotas:</p>
+        <p>
+            <li>perro</li>
+            <li>gato</li>
+            <li>ave</li>
+        </p>
+        <p>En caso de pasar una mascota la cual no sea de la lista deberá retornar "Tipo de mascota inválida"</p>
+        <p>Para cada tipo de mascota, la función retornará diferente información basada en la edad.</p>
+        <p>Perros
+                <li>
+                    Si la edad es menor al año, deberá retornar "Los cachorros necesitan pequeñas y frecuentes sesiones de juego"
+                </li>
+                <li>
+                    Si la edad es entre 1 y 7 años, deberá retornar "Los perros a esta edad necesitan caminatas diarias y sesiones de juego"
+                </li>
+                <li>
+                    Si la edad es mayor a 7 años, deberá retornar "Los perros viejos necesitan caminatas más cortas"
+                </li>
+        </p>
+
+        <p>Gatos
+            <li>
+                Si la edad es menor al año, deberá retornar "Los gatitos necesitan frecuentes sesiones de juego"
+            </li>
+            <li>
+                Si la edad es entre 1 y 7 años, deberá retornar "Los gatos a esta edad necesitan jugar diariamente"
+            </li>
+            <li>
+                Si la edad es mayor a 7 años, deberá retornar "Los gatos viejos necesitan sesiones de juego más cortas"
+            </li>
+        </p>
+
+        <p>Aves
+            <li>
+                Si la edad es menor al año, deberá retornar "Las aves jóvenes necesitan mucho espacio para volar"
+            </li>
+            <li>
+                Si la edad es entre 1 y 7 años, deberá retornar "Las aves necesitan jugar diariamente y un lugar para volar"
+            </li>
+            <li>
+                Si la edad es mayor a 7 años, deberá retornar "Las aves mayores necesitan descansar más, pero siguen ocupando un lugar para volar"
+            </li>
+        </p>
+
+        <p>Tendrás inputs y outputs como los siguientes 👇</p>
+
+        <p>Ejemplo 1:</p>
+        <div class="code">
+            <code>
+                Input: getPetExerciseInfo("perro", 3) <br>
+                Output: "Los perros a esta edad necesitan caminatas diarias y sesiones de juego"
+            </code>
+        </div>
+
+        <p>Ejemplo 2:</p>
+        <div class="code">
+            <code>
+                Input: getPetExerciseInfo("gato", 8) <br>
+                Output: "Los gatos viejos necesitan sesiones de juego más cortas"
+            </code>
+        </div>
+
+        <p>Ejemplo 3:</p>
+        <div class="code">
+            <code>
+                Input: getPetExerciseInfo("Mamut", 25) <br>
+                Output: "Tipo de mascota invalida"
+            </code>
+        </div>
+    </div>
+    <!-- Code JavaScript -->
+    <script src="./js/day3.js"></script>
+</body>
+</html>
