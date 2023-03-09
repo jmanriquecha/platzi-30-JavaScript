@@ -25,6 +25,31 @@ body{
     grid-template-columns: auto;
     margin: auto;
     width: 80%;
+    color: #FFF;
+}
+
+.container input, .container button{
+    width: 50%;
+    height: 30px;
+    margin: 5px;
+}
+
+.container button{
+    border-radius: 10px;
+    border: none;
+    height: 40px;
+    background-color: #095f34;
+    color: #FFF;
+    cursor: pointer;
+}
+
+.container button:hover{
+    background-color: #1eb878;
+}
+
+.container li{
+    list-style: square;
+    margin-left: 40px;
 }
 
 h1{
